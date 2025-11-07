@@ -20,10 +20,10 @@
   age = undefined;
   age = 1;
   function find(): number | undefined {
-    //return undefined;
+    return undefined;
   }
 
   // null
   let person: null;  // 💩
-  let name: string | null;
+  let person2: string | null;
 }
