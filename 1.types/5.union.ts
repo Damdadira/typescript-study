@@ -18,7 +18,7 @@
     }
   };
   type FailState = {
-    response: string;
+    reason: string;
   }
   type LoginState = SuccessState | FailState;
   function login(id: string, password: string): LoginState {
@@ -35,16 +35,7 @@
    * success -> 🍋 body
    * fail -> 😂 reason
    */
-  type SuccessState2 = {
-    response: {
-      body: string;
-    }
-  }
-  type FailState2 = {
-    reason: string;
-  }
-  type LoginState2 = SuccessState2 | FailState2;
-  function printLoginState(state: LoginState2) {
+  function printLoginState(state: LoginState) {
     if("response" in state) {
       console.log(`🍋, ${state.response.body}`);
     }
