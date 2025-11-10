@@ -21,6 +21,6 @@ function calculate(type: CalculateType, a: number, b: number): number {
     case "remainder":
       return a % b;
     default:
-      throw Error("unknown type");
+      throw new Error("unknown type");
   }
 }
