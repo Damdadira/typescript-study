@@ -16,10 +16,6 @@
       this.coffeeBeans = coffeeBeans;
     }
 
-    static makeMachine(coffeeBeans: number): CoffeeMachine {
-      return new CoffeeMachine(coffeeBeans);
-    }
-
     fillCoffeeBeans(beans: number) {
       if(beans < 0) {
         throw new Error("value for beans should be greater than 0");
