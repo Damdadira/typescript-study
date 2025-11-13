@@ -40,3 +40,14 @@ bob.workPartTime();
 
 const cindyAfterPay = pay(cindy);
 const bobAfterPay = pay(bob);
+
+const obj = {
+  name: "cindy",
+  age: 20,
+}
+console.log(getValue(obj, "name"));  // cindy
+console.log(getValue(obj, "age"));  // 20
+
+function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
